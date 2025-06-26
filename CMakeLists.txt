@@ -4,10 +4,8 @@ target_sources(bmm150 PRIVATE
     "bmm150.c"
 )
 
-target_include_directories(bmm150 PUBLIC 
-)
-
-target_link_libraries(bmm150 PUBLIC
+target_include_directories(bmm150 PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 target_compile_options(bmm150 PUBLIC
