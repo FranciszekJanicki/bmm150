@@ -4,6 +4,10 @@
 #include "bmm150_config.h"
 #include <assert.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 inline float32_t bmm150_x_raw_to_scaled(bmm150_trim_data_t const* data,
                                         uint16_t rhall,
                                         int16_t raw)
@@ -93,5 +97,9 @@ inline vec3_float32_t bmm150_xyz_raw_to_scaled(bmm150_trim_data_t const* data,
                             .y = bmm150_y_raw_to_scaled(data, rhall, raw->y),
                             .z = bmm150_z_raw_to_scaled(data, rhall, raw->z)};
 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // BMM150_BMM150_UTILITY_H

@@ -5,6 +5,10 @@
 #include "bmm150_registers.h"
 #include "bmm150_utility.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     bmm150_config_t config;
     bmm150_interface_t interface;
@@ -99,5 +103,9 @@ bmm150_err_t bmm150_set_axis_rep_z_reg(bmm150_t const* bmm150,
 
 bmm150_err_t bmm150_send_softreset_cmd(bmm150_t const* bmm150);
 bmm150_err_t bmm150_send_suspend_cmd(bmm150_t const* bmm150);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // BMM150_BMM150_H

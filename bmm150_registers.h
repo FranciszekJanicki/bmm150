@@ -3,6 +3,10 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     uint8_t chip_id : 8;
 } bmm150_chip_id_reg_t;
@@ -95,5 +99,9 @@ typedef struct {
 typedef struct {
     uint8_t repetitions_z : 8;
 } bmm150_axis_rep_z_reg_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // BMM150_BMM150_REGISTERS_H
